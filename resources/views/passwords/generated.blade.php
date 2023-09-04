@@ -8,10 +8,8 @@
     <title>Password Generator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
 </head>
 <body>
-{{--container w-50 m-auto!important"--}}
 <div class="container w-50 m-auto!important text-center">
     <div class="row row-cols-1 row-cols-lg align-items-stretch g-4 py-5">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
@@ -24,8 +22,6 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('js/script.js') }}" defer></script>
-
 </body>
 </html>
 @endsection

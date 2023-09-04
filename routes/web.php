@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/save-password', [PasswordController::class, 'savePassword'])->name('save-password');
 //    Route::get('/generate_passwords', [PasswordController::class, 'generate_passwords'])->name('generate_passwords');
 //    Route::get('/savePassword', [PasswordController::class, 'savePassword'])->name('savePassword');
-    Route::get('/generated', [PasswordController::class, 'generated'])->name('generated');
+    Route::get('/generated-page', [PasswordController::class, 'generatedPage'])->name('generated-page');
 });
 
 

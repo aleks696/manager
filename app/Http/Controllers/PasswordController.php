@@ -21,6 +21,11 @@ class PasswordController extends Controller
         return view('passwords.generate_passwords', compact('randomPassword'));
     }
 
+    public function generatedPage()
+    {
+        return view('passwords.generated');
+    }
+
     public function savePassword(Request $request)
     {
         $password = $request->input('password');
@@ -32,7 +37,7 @@ class PasswordController extends Controller
 
     private function generateRandomPassword($length)
     {
-        $charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        $charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_";
         $password = "";
 
         for ($i = 0; $i < $length; $i++) {
@@ -43,35 +48,7 @@ class PasswordController extends Controller
         return $password;
     }
 
-
-//     public function generate_passwords()
-//     {
-//        return view('passwords.generate_passwords');
-//     }
-//
-//    public function savePassword(Request $request)
-//    {
-//        $request->validate([
-////            'name' => 'required',
-//            'password' => 'required|string',
-//        ]);
-//
-//        // Save the data to the database
-//        $password = new Password([
-////            'name' => $request->input('name'),
-//            'password' => $request->input('password')]);
-//        $password->save();
-//
-//        // Return the view with the generated password
-//        return view('passwords.generated')->with('password', $request->input('password'));
-//    }
-//
-//    public function generated(){
-//         return view('passwords.generated');
-//    }
-
     function saved_passwords(){
-//        return redirect(route('saved_passwords'));
         return view('passwords.saved_passwords');
     }
 
