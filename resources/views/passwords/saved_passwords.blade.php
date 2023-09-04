@@ -23,16 +23,19 @@
 {{--                        <form method="POST" action="{{ route('generate-password') }}">--}}
                             @csrf
 {{--                        </form><br><br>--}}
+{{--@auth{{auth()->user()->email}}@endauth--}}
+                        <h3>Your saved Passwords:<br></h3><br>
+                        <div class="d-flex justify-content-center">
+                            <ul>
+                                @foreach ($passwords as $password)
+                                    <a href="#" class="list-group-item list-group-item-action ">{{ $password->password }}</a><br>
+                                @endforeach
+                            </ul>
+                        </div>
 
-                        <h1>Saved Passwords for @auth{{auth()->user()->email}}@endauth</h1>
-
-                        <ul>
-                            @foreach ($passwords as $password)
-                                <li>{{ $password->password }}</li>
-                            @endforeach
-                        </ul>
-
-                        <a href="{{ route('generate-password-view') }}">Generate New Password</a>
+                        <div class="mb-3">
+                            <a href="{{route('generate-password-view')}}" class="btn btn-success">Generate new password</a>
+                        </div>
 
                     </div>
                 </div>

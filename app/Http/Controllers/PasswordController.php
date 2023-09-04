@@ -55,7 +55,6 @@ class PasswordController extends Controller
     {
         $email = Auth::user()->email;; // Получаем email из запроса
         $passwords = Password::where('email', $email)->get(); // Ищем пароли для данного email
-
         return view('passwords.saved_passwords', compact('passwords'));
     }
 
