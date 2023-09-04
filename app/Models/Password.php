@@ -11,6 +11,6 @@ class Password extends Model
     protected $table = 'passwords';
 
     protected $fillable = [
-//        'name',
+        'email',
         'password'];
 }

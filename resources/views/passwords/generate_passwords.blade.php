@@ -29,6 +29,7 @@
                             <form method="POST" action="{{ route('save-password') }}">
                                 @csrf
                                 <input type="hidden" name="password" value="{{ $randomPassword }}"><br>
+                                <input type="hidden" name="email" value="{{ Auth::user()->email }}">
                                 <button id="saveBtn" class="btn btn-primary w-100 py-2" type="submit">Save Password</button>
                             </form>
                         </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Password;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PasswordController extends Controller
 {
@@ -29,10 +30,12 @@ class PasswordController extends Controller
     public function savePassword(Request $request)
     {
         $password = $request->input('password');
-        $passwordModel = new Password(['password' => $password]);
+        $email = Auth::user()->email;
+
+        $passwordModel = new Password(['email' => $email, 'password' => $password]);
         $passwordModel->save();
 
-        return redirect()->route('generate-password-view')->with('success', 'Пароль успешно сохранен');
+        return redirect()->route('generated-page')->with('success', 'Пароль успешно сохранен');
     }
 
     private function generateRandomPassword($length)
