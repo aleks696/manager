@@ -33,7 +33,6 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/generate-password', [PasswordController::class, 'generatePassword'])->name('generate-password');
     Route::post('/save-password', [PasswordController::class, 'savePassword'])->name('save-password');
     Route::get('/generated-page', [PasswordController::class, 'generatedPage'])->name('generated-page');
+    Route::delete('/delete-password/{id}', [PasswordController::class, 'deletePassword'])->name('delete-password');
 });
-
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

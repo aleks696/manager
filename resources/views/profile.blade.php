@@ -10,10 +10,7 @@
 @include('include.header')
 @yield('content')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <div class="container">
-        @include('include.errors')
-    </div>
+@include('include.errors')
 <form action="{{route('profile')}}" method="POST" class="ms-auto me-auto mt-3" style="width: 500px">
     @csrf
     <section class="py-5 text-center container">
@@ -35,7 +32,5 @@
         </div>
     </section>
 </form>
-
-{{--@include('include.body')--}}
 </body>
 </html>

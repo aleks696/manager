@@ -11,7 +11,6 @@
 </head>
 <body>
 @include('include.errors')
-
 <div class="container w-50 m-auto!important text-center">
     <div class="row row-cols-1 row-cols-lg align-items-stretch g-4 py-5">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">

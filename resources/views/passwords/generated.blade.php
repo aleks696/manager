@@ -17,6 +17,12 @@
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold py-2 ">Password Generator</h3>
                     <h2> Your password has been successfully saved. </h2><br><br>
+                    <div class="mb-3">
+                        <a href="{{route('saved-passwords-view')}}" class="btn btn-primary">Review saved passwords</a>
+                    </div>
+                    <div class="mb-3">
+                        <a href="{{route('generate-password-view')}}" class="btn btn-success">Generate new password</a>
+                    </div>
                 </div>
             </div>
         </div>
