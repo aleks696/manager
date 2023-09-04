@@ -23,7 +23,7 @@
                 <p class="lead text-body-secondary">What would you like to do this time?</p>
                 <div class="container">
                     <div class="mb-3">
-                        <a href="{{route('saved_passwords')}}" class="btn btn-primary">Review saved passwords</a>
+                        <a href="{{route('saved-passwords-view')}}" class="btn btn-primary">Review saved passwords</a>
                     </div>
                 </div>
                 <div class="container">

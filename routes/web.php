@@ -28,7 +28,7 @@ Route::get('/logout',[Controller::class, 'logout'])->name('logout');
 Route::get('/about', [Controller::class, 'about'])->name('about');
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/profile', [Controller::class, 'profile'])->name('profile');
-    Route::get('/saved_passwords', [PasswordController::class, 'saved_passwords'])->name('saved_passwords');
+    Route::get('/saved-passwords', [PasswordController::class, 'savedPasswords'])->name('saved-passwords-view');
     Route::get('/generate-password', [PasswordController::class, 'generatePasswordView'])->name('generate-password-view');
     Route::post('/generate-password', [PasswordController::class, 'generatePassword'])->name('generate-password');
     Route::post('/save-password', [PasswordController::class, 'savePassword'])->name('save-password');

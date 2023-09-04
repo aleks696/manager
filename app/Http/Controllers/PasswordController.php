@@ -51,8 +51,12 @@ class PasswordController extends Controller
         return $password;
     }
 
-    function saved_passwords(){
-        return view('passwords.saved_passwords');
+    function savedPasswords()
+    {
+        $email = Auth::user()->email;; // Получаем email из запроса
+        $passwords = Password::where('email', $email)->get(); // Ищем пароли для данного email
+
+        return view('passwords.saved_passwords', compact('passwords'));
     }
 
 }
