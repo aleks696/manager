@@ -75,11 +75,4 @@ class Controller extends BaseController
         return view('profile');
     }
 
-    function saved_passwords(){
-//        return redirect(route('saved_passwords'));
-        return view('saved_passwords');
-    }
-
-
-
 }

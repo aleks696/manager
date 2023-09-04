@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Password extends Model
 {
     use HasFactory;
+    protected $table = 'passwords';
+
+    protected $fillable = [
+//        'name',
+        'password'];
 }

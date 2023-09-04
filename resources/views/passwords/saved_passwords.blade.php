@@ -14,10 +14,6 @@
 
 {{--    Code for executing saved passwords from DB and show on the page--}}
 
-    <script>
-
-    </script>
-
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">

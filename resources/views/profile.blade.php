@@ -28,7 +28,7 @@
                 </div>
                 <div class="container">
                     <div class="mb-3">
-                        <a href="{{route('generate_passwords')}}" class="btn btn-success">Generate new password</a>
+                        <a href="{{route('generate-password-view')}}" class="btn btn-success">Generate new password</a>
                     </div>
                 </div>
             </div>
