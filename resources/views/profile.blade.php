@@ -20,12 +20,12 @@
                 <p class="lead text-body-secondary">What would you like to do this time?</p>
                 <div class="container">
                     <div class="mb-3">
-                        <a href="{{route('saved-passwords-view')}}" class="btn btn-primary">Review saved passwords</a>
+                        <a href="{{route('saved-passwords-post')}}" class="btn btn-primary">Review saved passwords</a>
                     </div>
                 </div>
                 <div class="container">
                     <div class="mb-3">
-                        <a href="{{route('generate-password-view')}}" class="btn btn-success">Generate new password</a>
+                        <a href="{{route('generate-password-post')}}" class="btn btn-success">Generate new password</a>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class PasswordController extends Controller
 {
 
-    public function generatePasswordView()
+    public function generatePasswordPost()
     {
         return view('passwords.generate_passwords');
     }
