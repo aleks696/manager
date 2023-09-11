@@ -35,7 +35,7 @@ class PasswordController extends Controller
         $passwordModel = new Password(['email' => $email, 'password' => $password]);
         $passwordModel->save();
 
-        return redirect()->route('generated-page')->with('success', 'Пароль успешно сохранен');
+        return redirect()->route('generated-page')->with('success', 'Password saved successfully.');
     }
 
     private function generateRandomPassword($length)
@@ -53,8 +53,8 @@ class PasswordController extends Controller
 
     function savedPasswords()
     {
-        $email = Auth::user()->email;; // Получаем email из запроса
-        $passwords = Password::where('email', $email)->get(); // Ищем пароли для данного email
+        $email = Auth::user()->email;; // Get email of user
+        $passwords = Password::where('email', $email)->get(); // Get all password with this email
 
         return view('passwords.saved_passwords', compact('passwords'));
     }

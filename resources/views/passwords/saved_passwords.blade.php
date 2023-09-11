@@ -7,7 +7,8 @@
     <title>@yield('title', 'Profile Passwords')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="refresh" content="5;url={{ request()->url() }}">
+{{--    Allow this if you want to refresh page in some time. By default it is set to 5s--}}
+{{--    <meta http-equiv="refresh" content="5;url={{ request()->url() }}">--}}
 </head>
 <body>
 @section('content')
@@ -22,16 +23,17 @@
                         <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold py-2 ">Password Generator</h3>
                         @csrf
                         <h3>Your saved Passwords:<br></h3><br>
-                        <div class="d-flex justify-content-center">
+                        <div class="row featurette d-flex border-box">
                             <ul>
                                 @foreach ($passwords as $password)
                                     <form method="POST" action="{{ route('delete-password', ['id' => $password->id]) }}">
                                         @csrf
                                         @method('DELETE')
-                                        <span>{{ $password->password }}</span>
-{{--                                        <p><a href="#" class="list-group-item list-group-item-action ">{{ $password->password }}</a>--}}
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form>
+                                        <div class="col-md7 order-md-2">
+                                        <span>{{ $password->password }}</span></div>
+                                        <div class="col-md7 order-md-1">
+                                        <button type="submit" class="btn btn-danger">Delete</button></div>
+                                    </form><br>
                                 @endforeach
                             </ul>
                         </div>
