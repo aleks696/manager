@@ -13,4 +13,8 @@ class Password extends Model
     protected $fillable = [
         'email',
         'password'];
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'email', 'email');
+    }
 }
