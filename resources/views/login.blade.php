@@ -1,21 +1,21 @@
-@extends('layout')
-@section('title', 'Login')
-@section('content')
-    <div class="container">
-        @include('include.errors')
-
-        <form action="{{route('login.post')}}" method="POST" class="ms-auto me-auto mt-3" style="width: 500px">
-            @csrf
-            <div class="mb-3">
-                <label class="form-label">Email address</label>
-                <input type="email" class="form-control" name="email">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-    </div>
-@endsection
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
